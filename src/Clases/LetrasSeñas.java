@@ -9,59 +9,42 @@ import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 
 
-
 public class LetrasSeñas extends javax.swing.JFrame {
-    
 
 
+    LinkedList<String> salida = new LinkedList();
 
 
-LinkedList<String> salida = new LinkedList();
-
-
-
-   
-       
-       
-       
-       
     public LetrasSeñas() {
-        
-         try {
-            this.setIconImage( ImageIO.read(new File("Imagenes/Logo.png")));
+
+        try {
+            this.setIconImage(ImageIO.read(new File("Imagenes/Logo.png")));
         } catch (IOException ex) {
             Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        setDefaultCloseOperation(EXIT_ON_CLOSE);         
+
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         initComponents();
-         this.setSize(900, 750);
-         setResizable(false);
-         
-          getContentPane().setBackground(new java.awt.Color(240,255, 255));
+        this.setSize(900, 750);
+        setResizable(false);
+
+        getContentPane().setBackground(new java.awt.Color(240, 255, 255));
 
         pack();
-      
-         
-       
-                
-           
+
+
     }
 
-    
- public String salidaImpresion() {
+
+    public String salidaImpresion() {
         String cad = "";
         for (String e : salida) {
             cad += "" + e.toString();
         }
         return cad + "";
     }
-    
 
-    
-    
-    
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -116,30 +99,30 @@ LinkedList<String> salida = new LinkedList();
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 855, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2))
-                .addContainerGap(23, Short.MAX_VALUE))
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(22, 22, 22)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 855, Short.MAX_VALUE)
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane2))
+                                .addContainerGap(23, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2)
-                .addContainerGap(48, Short.MAX_VALUE))
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(22, 22, 22)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton2)
+                                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         pack();
@@ -147,29 +130,23 @@ LinkedList<String> salida = new LinkedList();
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
-        Menu m1 = new Menu( );
+        Menu m1 = new Menu();
         m1.setVisible(true);
         this.setVisible(false);
-      salida.clear();
-      this.jTextPane1.setText(salidaImpresion());
-      
+        salida.clear();
+        this.jTextPane1.setText(salidaImpresion());
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void formKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyTyped
-   
-        
+
+
     }//GEN-LAST:event_formKeyTyped
 
     private void jTextArea1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextArea1KeyTyped
-      
-        char letra = evt.getKeyChar();
-        
 
-        
-        
-      
-        
-        
+        char letra = evt.getKeyChar();
+
 
         switch (letra) {
 
@@ -180,7 +157,7 @@ LinkedList<String> salida = new LinkedList();
             case KeyEvent.VK_BACK_SPACE:
                 borrar();
                 break;
-                
+
             case KeyEvent.VK_0:
                 m0();
                 break;
@@ -322,8 +299,8 @@ LinkedList<String> salida = new LinkedList();
                 break;
 
         }
-    
-       
+
+
     }//GEN-LAST:event_jTextArea1KeyTyped
 
 
@@ -509,51 +486,61 @@ LinkedList<String> salida = new LinkedList();
         salida.add("z");
         this.jTextPane1.setText(salidaImpresion());
     }
+
     private void m0() {
 
         salida.add("0");
         this.jTextPane1.setText(salidaImpresion());
     }
+
     private void m1() {
 
         salida.add("1");
         this.jTextPane1.setText(salidaImpresion());
     }
+
     private void m2() {
 
         salida.add("2");
         this.jTextPane1.setText(salidaImpresion());
     }
+
     private void m3() {
 
         salida.add("3");
         this.jTextPane1.setText(salidaImpresion());
     }
+
     private void m4() {
 
         salida.add("4");
         this.jTextPane1.setText(salidaImpresion());
     }
+
     private void m5() {
 
         salida.add("5");
         this.jTextPane1.setText(salidaImpresion());
     }
+
     private void m6() {
 
         salida.add("6");
         this.jTextPane1.setText(salidaImpresion());
     }
+
     private void m7() {
 
         salida.add("7");
         this.jTextPane1.setText(salidaImpresion());
     }
+
     private void m8() {
 
         salida.add("8");
         this.jTextPane1.setText(salidaImpresion());
     }
+
     private void m9() {
 
         salida.add("9");
@@ -561,13 +548,14 @@ LinkedList<String> salida = new LinkedList();
     }
 
     private void borrar() {
-        
-        if(salida.isEmpty() == true){}
-        else{
-        salida.removeLast();
-        this.jTextPane1.setText(salidaImpresion());
-        
-    }}
+
+        if (salida.isEmpty() == true) {
+        } else {
+            salida.removeLast();
+            this.jTextPane1.setText(salidaImpresion());
+
+        }
+    }
 
     private void enter() {
 
